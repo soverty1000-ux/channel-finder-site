@@ -31,7 +31,7 @@
     <h2>How it uses YouTube API Services</h2>
     <ul>
       <li><strong>Public data.</strong> It reads video titles, view counts, publish dates and channel statistics with <code>search.list</code>, <code>videos.list</code>, <code>channels.list</code> and <code>playlistItems.list</code>. It reads public comments on a small number of selected videos with <code>commentThreads.list</code> to understand audience reactions.</li>
-      <li><strong>The team's own channel.</strong> With the channel owner's Google sign-in (scopes <code>youtube.upload</code> and <code>youtube.readonly</code>), it uploads the team's own videos and reads the team's own channel statistics. It does not access anyone else's account.</li>
+      <li><strong>The team's own channel.</strong> With the channel owner's Google sign-in (scopes <code>youtube.upload</code>, <code>youtube.readonly</code> and <code>yt-analytics.readonly</code>), it uploads the team's own videos and reads the team's own channel statistics and reports (YouTube Analytics and Reporting APIs). It does not access anyone else's account.</li>
       <li><strong>No redistribution.</strong> YouTube data is not sold, shared, published or redistributed.</li>
       <li><strong>No downloading.</strong> The tool does not download, cache or re-host YouTube video or audio content. Source footage for clips is received directly from the original creators.</li>
       <li><strong>Low usage.</strong> Each script has a hard cap on search calls per run, a daily counter stops runs at the cap, and recent results are reused instead of being requested again.</li>
