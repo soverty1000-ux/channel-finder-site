@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Channel Finder</title>
+<meta name="description" content="Channel Finder (WeMove) is an internal research tool used by one small content team. It uses YouTube API Services.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="name" href="index.html">Channel Finder (WeMove)</a>
+    <nav aria-label="Pages">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>
+      <a href="http://www.google.com/policies/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>
+    </nav>
+  </header>
+
+  <span class="badge">This service uses <strong>YouTube API Services</strong></span>
+
+  <main>
+    <h1>An internal research tool for one small content team</h1>
+    <p class="lead">Channel Finder is a tool that runs on the computers of a small team, led by An Gwangmin, that makes original Korean-language videos. It is not offered to the public and has no user accounts.</p>
+
+    <h2>What it does</h2>
+    <p>It helps the team decide which topics are worth making original videos about by looking at public YouTube statistics, for example topics that once drew large audiences but have not been covered recently. Results are shown only to the team in a dashboard on their own computers.</p>
+
+    <h2>How it uses YouTube API Services</h2>
+    <ul>
+      <li><strong>Public data.</strong> It reads video titles, view counts, publish dates and channel statistics with <code>search.list</code>, <code>videos.list</code>, <code>channels.list</code> and <code>playlistItems.list</code>. It reads public comments on a small number of selected videos with <code>commentThreads.list</code> to understand audience reactions.</li>
+      <li><strong>The team's own channel.</strong> With the channel owner's Google sign-in (scopes <code>youtube.upload</code> and <code>youtube.readonly</code>), it uploads the team's own videos and reads the team's own channel statistics. It does not access anyone else's account.</li>
+      <li><strong>No redistribution.</strong> YouTube data is not sold, shared, published or redistributed.</li>
+      <li><strong>No downloading.</strong> The tool does not download, cache or re-host YouTube video or audio content. Source footage for clips is received directly from the original creators.</li>
+      <li><strong>Low usage.</strong> Each script has a hard cap on search calls per run, a daily counter stops runs at the cap, and recent results are reused instead of being requested again.</li>
+    </ul>
+
+    <h2>Data retention</h2>
+    <p>Data is kept only in files on the team's own computers. Public YouTube data is deleted or refreshed within 30 calendar days. Details are in the <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:soverty@kakao.com">soverty@kakao.com</a></p>
+  </main>
+
+  <footer class="site">
+    This service uses YouTube API Services. By using it you agree to the <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener">YouTube Terms of Service</a>. Google Privacy Policy: <a href="http://www.google.com/policies/privacy" target="_blank" rel="noopener">http://www.google.com/policies/privacy</a> · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
+  </footer>
+</div>
+</body>
+</html>
